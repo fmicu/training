@@ -1,0 +1,16 @@
+//a=(width+1)*length-1
+let chess = (str,a) => a%9==0 ? str+='\n': a%2!=0 ? str+='%': str+=' ';
+
+function sakk(str,a){
+if(a==0){
+  str=chess(str,a)
+  return console.log(str)
+}
+else{
+  str=chess(str,a)
+  return sakk(str,a-1)
+}
+
+}
+
+sakk('',71)
