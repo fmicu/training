@@ -1,0 +1,35 @@
+function diagonal(lineCount){
+let linesArr=[];
+let square=''
+for(let i=0;i<lineCount;i++){
+linesArr[i]= ''
+
+
+}
+for(let i=0;i<lineCount;i++){
+if(i==0||i==lineCount-1){
+  for(let j=0;j<lineCount;j++){
+    linesArr[i]+='%'
+  }
+}
+else{
+  for(let j=0;j<lineCount;j++){
+    if(j==0||j==lineCount-1){
+      linesArr[i]+='%'
+    }
+    else if(j==i){
+      linesArr[i]+='%'
+    }
+    else{
+      linesArr[i]+=' '
+    }
+  }
+}
+
+}
+square=linesArr.join('\n')
+return console.log(square)
+
+}
+
+diagonal(50)
