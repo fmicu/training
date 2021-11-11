@@ -1,0 +1,29 @@
+function diamond(lineCount){
+  if(lineCount%2==0){
+return console.log("Can't draw this diamond! Give an odd number!") 
+}
+
+let half=Math.floor(lineCount/2)
+let lineArr=[]
+
+
+for(let i=0;i<lineCount;i++){
+  lineArr[i]=''
+  
+}
+for(let i=0;i<lineCount;i++){
+  
+  for(let j=0;j<lineCount;j++){
+    console.log('i',i,'j',j,'half-i',half-i)
+    if(j<half-i){
+      lineArr[j]+='a'
+    }
+    
+  }
+}
+console.log(lineArr)
+
+}
+
+
+diamond(7)
