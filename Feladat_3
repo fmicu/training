@@ -1,29 +1,63 @@
+
+
 function diamond(lineCount){
+  let lC=lineCount
   if(lineCount%2==0){
-return console.log("Can't draw this diamond! Give an odd number!") 
+    lC=lineCount-1
+  }
+let half=Math.floor(lC/2)
+let arr=[]
+let rev=[]
+let even1=['']
+let even2=['']
+let odd =['']
+let result
+for(let i=0;i<half;i++){
+  arr[i]=''
 }
+for(let i=0;i<half;i++){
+  for(let j=0;j<lC;j++){
+    if(j<half-i||j>half+i){
+      arr[i]+=' '
 
-let half=Math.floor(lineCount/2)
-let lineArr=[]
-
-
-for(let i=0;i<lineCount;i++){
-  lineArr[i]=''
-  
-}
-for(let i=0;i<lineCount;i++){
-  
-  for(let j=0;j<lineCount;j++){
-    console.log('i',i,'j',j,'half-i',half-i)
-    if(j<half-i){
-      lineArr[j]+='a'
     }
-    
+    else{
+      arr[i]+='*'
+    }
   }
 }
-console.log(lineArr)
+rev=arr.reduce((a,b)=>[b].concat(a),[])
 
+
+
+for(let i=0;i<lC;i++){
+  
+    even1[0]+='*'
+  even2[0]+='*'
+  odd[0]+='*'
+  
+ 
 }
 
+if(lineCount%2==0){
+result=arr.join('\n')
+result+='\n'
+result+=even1.join('\n')
+result+='\n'
+result+=even2.join('\n')
+result+='\n'
+result+=rev.join('\n')
+result+='\n'
+return console.log(result)
+}
+else{
+  result=arr.join('\n')
+  result+='\n'
+result+=odd.join('\n')
+result+='\n'
+result+=rev.join('\n')
+return console.log(result)
+}
+}
 
 diamond(7)
