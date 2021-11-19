@@ -1,0 +1,54 @@
+function rhombus(lineNum){
+  if(lineNum%2!=0){
+    return console.log("Can't draw this rhombus. Give an even number!")
+  }
+  let half=lineNum/2
+  let firstPosition=[]
+  let secondPosition=[]
+  let drawRhombus=''
+  for(let i=0;i<half;i++){
+    firstPosition.push(Math.abs(half-1-i))
+    secondPosition.push(i+half)
+  }
+  for(let i=0;i<half;i++){
+    for(let j=0;j<lineNum;j++){
+      
+if(j==firstPosition[i]){
+  //console.log(j,firstPosition[i])
+  drawRhombus+='/'
+}
+else if(j==secondPosition[i]){
+ // console.log(j)
+  drawRhombus+="\\"
+}
+else drawRhombus+='_'
+ //console.log(j)
+
+
+    }
+   console.log(drawRhombus)
+drawRhombus=''
+  
+  }
+  for(let i=half-1;i>=0;i--){
+    for(let j=0;j<lineNum;j++){
+      
+if(j==firstPosition[i]){
+  //console.log(j,firstPosition[i])
+  drawRhombus+='\\'
+}
+else if(j==secondPosition[i]){
+ // console.log(j)
+  drawRhombus+="/"
+}
+else drawRhombus+='_'
+ //console.log(j)
+
+
+    }
+   console.log(drawRhombus)
+drawRhombus=''
+  
+  }
+}
+rhombus(30) 
