@@ -1,0 +1,16 @@
+function pyramid(lineNumber){
+let lineString=''
+let lengthOfLines=lineNumber*2-1
+for(let j=lineNumber-1;j>=0;j--){
+  for(let i=0;i<lengthOfLines;i++){
+    if(i<j||i>lengthOfLines-1-j){
+      lineString+=' '
+    }
+    else{lineString+='*'}
+  }
+  console.log(lineString)
+  lineString=''
+}
+
+}
+pyramid(10)
