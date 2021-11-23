@@ -1,0 +1,11 @@
+function average(number){
+  let sum=0;
+  let average=0;
+  for(let i=1;i<number+1;i++){
+sum+=i
+average=sum/i
+  }
+  console.log('Sum:',sum,' ','Average:',average)
+}
+
+average(10)
